@@ -206,7 +206,8 @@ Copy
   price: "1200 ASTK",
   rating: "4.6 ★"
 }
-![Screenshot 2025-02-13 212936](frontend/public/screenshots/Скриншот%202025-02-13%212936.png)
+![My Screenshot](frontend/public/screenshots/screenshot-2025-02-13-2936.png)
+
 
 
 ### Transaction Flow
