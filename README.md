@@ -74,7 +74,7 @@ ai-model-marketplace/
 // - Initial supply: 1,000,000 tokens
 // - Mintable (for testing)
 // - Transfer/approval functionality
-// - Based on OpenZeppelin ERC20 ```
+// - Based on OpenZeppelin ERC20 
 # AI Model Marketplace 
 
 ## 2. Marketplace Contract (AiModelMarketplace.sol)
