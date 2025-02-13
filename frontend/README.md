@@ -73,11 +73,11 @@ List Model: Form to add a new model.
 View Models: List of available models with "Buy" and "Rate" buttons.
 
 📸 Screenshots
-Add screenshots of your application here (e.g., interface, model list, add model form, etc.).
-
+![Скриншот](images/Снимок%20экрана%202025-01-10%20221605.png)
+![Скриншот](images/Снимок%20экрана%202025-01-10%20221619.png)
+![Скриншот](images/Снимок%20экрана%202025-01-10%20221629.png)
+![Скриншот](images/Снимок%20экрана%202025-01-10%20221639.png)
+![Скриншот](images/Снимок%20экрана%202025-01-10%20222206.png)
 📜 License
 This project is licensed under the MIT License.
 
-🙌 Acknowledgements
-This project is developed for educational purposes. Thank you for your attention!
-S

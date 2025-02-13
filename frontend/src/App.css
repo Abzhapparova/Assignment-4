@@ -1,151 +1,181 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/* Общие стили */
+/* Фоновый градиент и базовые стили страницы */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
   margin: 0;
   padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2d3436, #636e72);
+  min-height: 100vh;
+  color: #f5f6fa;
 }
 
+/* Основной контейнер приложения */
 .app-container {
-  max-width: 800px;
-  margin: 20px auto;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  color: #333;
 }
 
-h1 {
+/* Шапка приложения */
+.header {
   text-align: center;
-  color: #007bff;
+  margin-bottom: 30px;
 }
 
-h2 {
-  margin-top: 20px;
-  color: #333;
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #00cec9;
 }
 
-.account-info {
-  font-size: 0.9rem;
-  color: #555;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Кнопки */
-button {
-  padding: 10px 15px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
+/* Кнопка подключения кошелька */
 .connect-button {
   display: block;
   margin: 20px auto;
-  background-color: #007bff;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  background-color: #00cec9;
+  border: none;
+  border-radius: 8px;
   color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .connect-button:hover {
-  background-color: #0056b3;
+  background-color: #0984e3;
 }
 
-.list-button,
-.buy-button,
-.rate-button {
-  background-color: #28a745;
-  color: #fff;
+/* Основной контент */
+.content {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.list-button:hover,
-.buy-button:hover,
-.rate-button:hover {
-  background-color: #218838;
-}
-
-.rate-button {
-  background-color: #ffc107;
-  color: #000;
-}
-
-.rate-button:hover {
-  background-color: #e0a800;
-}
-
-/* Формы */
-.model-form {
+/* Панель с информацией о кошельке */
+.info-bar {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
-.model-form input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
+/* Форма создания модели */
+.listing-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.listing-form h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #00cec9;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: none;
   border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #f5f6fa;
 }
 
-/* Карточки моделей */
+.create-button {
+  padding: 12px 25px;
+  background-color: #00cec9;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #0984e3;
+}
+
+/* Секция моделей */
+.models-section {
+  margin-top: 30px;
+}
+
+.models-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #00cec9;
+}
+
+/* Контейнер карточек моделей */
 .models-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
+/* Карточка модели */
 .model-card {
-  background: #f9f9f9;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.model-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .model-card p {
-  margin: 5px 0;
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
 }
 
-.model-card strong {
-  color: #333;
+.buy-button, .rate-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.buy-button:hover {
+  background-color: #219653;
+}
+
+.rate-button {
+  background-color: #f39c12;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.rate-button:hover {
+  background-color: #d98b10;
+}
+
+.sold-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f1c40f;
+  margin-top: 10px;
 }

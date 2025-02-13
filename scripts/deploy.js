@@ -1,18 +1,23 @@
-const hre = require("hardhat");
-
 async function main() {
-    // Получаем контракт для деплоя
-    const AiModelMarketplace = await hre.ethers.getContractFactory("AiModelMarketplace");
-    const aiMarketplace = await AiModelMarketplace.deploy();
+  const [deployer] = await ethers.getSigners();
+  console.log("Deploying contracts with account:", deployer.address);
 
-    await aiMarketplace.deployed();
+  // Деплой токена
+  const Token = await ethers.getContractFactory("AstanaITAbzhapparovaGSE2331Token");
+  const token = await Token.deploy();
+  await token.waitForDeployment();
+  console.log("Token deployed at:", token.target);
 
-    console.log("AiModelMarketplace deployed to:", aiMarketplace.address);
+  // Деплой маркетплейса, передавая адрес токена
+  const Marketplace = await ethers.getContractFactory("AiModelMarketplace");
+  const marketplace = await Marketplace.deploy(token.target);
+  await marketplace.waitForDeployment();
+  console.log("Marketplace deployed at:", marketplace.target);
 }
 
 main()
-    .then(() => process.exit(0))
-    .catch((error) => {
-        console.error(error);
-        process.exit(1);
-    });
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });

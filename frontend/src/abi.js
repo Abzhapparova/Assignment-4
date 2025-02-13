@@ -251,4 +251,4 @@ export const CONTRACT_ABI = [
   ]
   
     
-export const CONTRACT_ADDRESS = "0x64652fbEB0511C85A7631998F4a1Da71B5Fc2E96"; // Вставь сюда адрес контракта
+export const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; // Вставь сюда адрес контракта
