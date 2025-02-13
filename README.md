@@ -214,7 +214,7 @@ Copy
 ![Screenshot 2025-02-13 212844](frontend/public/screenshots/Скриншот%202025-02-13%212844.png)
 
 ### Sold model 
-![Screenshot 2025-02-13 212908](frontend/public/screenshots/Скриншот%202025-02-13%212908.png)
+![Screenshot 2025-02-13 212908](ai-model-marketplace/frontend/public/screenshots/Скриншот%202025-02-13%212908.png) 
 
 
 ----------
