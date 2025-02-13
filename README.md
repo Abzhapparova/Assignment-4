@@ -69,19 +69,11 @@ ai-model-marketplace/
 ## Smart Contracts 🔒
 
 ### 1. ERC‑20 Token (AstanaITAbzhapparovaGSE2331Token.sol)
-```solidity
-// Key Features:
-// - Initial supply: 1,000,000 tokens
-// - Mintable (for testing)
-// - Transfer/approval functionality
-// - Based on OpenZeppelin ERC20 
-# AI Model Marketplace 
 
 ## 2. Marketplace Contract (AiModelMarketplace.sol)
 
 ### Core Functions
 
-```solidity
 function listModel(
   string memory name,
   string memory description,
@@ -91,5 +83,179 @@ function listModel(
 
 function purchaseModel(uint256 modelId) external {}
 
-function rateModel(uint256 modelId, uint8 rating) external {}
+function rateModel(uint256 modelId, uint8 rating) external {}  
+## Setup and Installation 🚀
 
+### Prerequisites
+
+-   Node.js v18+
+    
+-   MetaMask (configured for Holesky testnet)
+    
+-   Alchemy API key (for deployment)
+    
+
+### Step-by-Step Guide
+
+1.  Clone repository:
+    
+    bash
+    
+    Copy
+    
+    git clone https://github.com/yourusername/ai-model-marketplace.git
+    cd ai-model-marketplace
+    
+2.  Install dependencies:
+    
+    bash
+    
+    Copy
+    
+    npm install
+    cd frontend && npm install
+    
+3.  Configure environment:  
+    Create  `.env`  file:
+    
+    env
+    
+    Copy
+    
+    ALCHEMY_API_KEY="your_alchemy_key"
+    PRIVATE_KEY="your_wallet_private_key"
+    
+4.  Deploy contracts:
+    
+    bash
+    
+    Copy
+    
+    npx hardhat run scripts/deploy.js --network holesky
+    
+5.  Start frontend:
+    
+    bash
+    
+    Copy
+    
+    cd frontend
+    npm start
+    
+
+----------
+
+## Usage 🛠️
+
+### For Sellers 🧑💼
+
+1.  Connect wallet
+    
+2.  Navigate to "List Model"
+    
+3.  Fill details:
+    
+    markdown
+    
+    Copy
+    
+    Name: Ai
+    Description: Model
+    Price: 500 
+    Link: ipfs://QmXyZ...
+    
+4.  Confirm transaction (≈ 142,300 gas)
+    
+
+### For Buyers 👨💼
+
+1.  Browse available models
+    
+2.  Approve token spending:
+    
+    javascript
+    
+    Copy
+    
+    await tokenContract.approve(marketplaceAddress, price);
+    
+3.  Purchase model
+    
+4.  Rate after purchase:  
+    ![Screenshot 2025-02-13 205248](frontend/public/screenshots/Скриншот%202025-02-13%20205248.png)
+    
+
+----------
+
+## Screenshots 📸
+
+### Wallet Connection
+
+![Screenshot 2025-02-13 200837](frontend/public/screenshots/Скриншот%202025-02-13%200837.png)
+
+### Model Listing
+
+javascript
+
+Copy
+
+// Example of listed model
+{
+  id: 3,
+  name: "Image Classifier v2.1",
+  price: "1200 ASTK",
+  rating: "4.6 ★"
+}
+![Screenshot 2025-02-13 212936](frontend/public/screenshots/Скриншот%202025-02-13%212936.png)
+
+
+### Transaction Flow
+
+![Screenshot 2025-02-13 212844](frontend/public/screenshots/Скриншот%202025-02-13%212844.png)
+
+### Sold model 
+![Screenshot 2025-02-13 212908](frontend/public/screenshots/Скриншот%202025-02-13%212908.png)
+
+
+----------
+
+## Contributing 🤝
+
+1.  Fork the repository
+    
+2.  Create feature branch:
+    
+    bash
+    
+    Copy
+    
+    git checkout -b feature/new-auction-system
+    
+3.  Commit changes:
+    
+    bash
+    
+    Copy
+    
+    git commit -m "Add Dutch auction functionality"
+    
+4.  Push to branch:
+    
+    bash
+    
+    Copy
+    
+    git push origin feature/new-auction-system
+    
+5.  Open Pull Request
+    
+
+----------
+
+## License 📄
+
+This project is licensed under the  **MIT License**  
+
+----------
+
+**Built with ❤️ by [Abzhapparova Gulnaz. SE-2331] 
