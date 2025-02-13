@@ -206,7 +206,7 @@ Copy
   price: "1200 ASTK",
   rating: "4.6 ★"
 }
-![My Screenshot](frontend/public/screenshots/screenshot-2025-02-13-2936.png)
+![My Screenshot](frontend/public/screenshots/Скриншот-2025-02-13-2936.png)
 
 
 
